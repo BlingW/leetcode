@@ -8,16 +8,19 @@ type ListNode struct {
 }
 
 func swapPairs(head *ListNode) *ListNode {
-	// 没有点或者只剩单个的点都无法交换
-	if head == nil || head.Next == nil {
-		return head
-	}
-	// 递归
-	next := head.Next
-	head.Next = swapPairs(next.Next)
-	next.Next = head
+	hair := &ListNode{0, head}
+	cur := hair
+	for cur.Next != nil && cur.Next.Next != nil {
+		start := cur.Next
+		end := cur.Next.Next
 
-	return next
+		start.Next = end.Next
+		end.Next = start
+		cur.Next = end
+		cur = start
+	}
+
+	return hair.Next
 }
 
 func main() {
