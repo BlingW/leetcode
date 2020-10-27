@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e3542c7-ef3d-4449-8e09-914e5ef16e14" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/sec/0641-design-circular-deque/main.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/third/0021-merge-two-sorted-lists/main.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/third/0026-remove-duplicates/main.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/third/0042-trapping-rain-water/main.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/third/0088-merge-sorted-array/main.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/third/0189-rotate-array/main.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/third/0234-palindrome-linked-list/main.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/third/0299-bulls-and-cows/main.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/third/0641-design-circular-deque/main.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/sec/0049-group-anagrams/main.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/sec/0242-valid-anagram/main.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/sec/0350-intersection-of-two-arrays-ii/main.go" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,28 +17,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/third/0026-remove-duplicates/main.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-              <folding>
-                <element signature="e#14#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/third/0088-merge-sorted-array/main.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/third/0189-rotate-array/main.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
@@ -54,11 +26,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/third/0299-bulls-and-cows/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
+            <state relative-caret-position="594">
+              <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sec/0049-group-anagrams/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="23" column="14" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="23" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sec/0242-valid-anagram/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
               <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sec/0350-intersection-of-two-arrays-ii/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -90,9 +92,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/sec/0142-has-cycle-ii/main.go" />
-        <option value="$PROJECT_DIR$/src/0025-reverse-nodes-in-k-group/main.go" />
-        <option value="$PROJECT_DIR$/src/0020-vaild-parentheses/main.go" />
         <option value="$PROJECT_DIR$/src/0155-min-stack/main.go" />
         <option value="$PROJECT_DIR$/src/0084-largest-rectangle-in/main.go" />
         <option value="$PROJECT_DIR$/src/0239-max-sliding-window/main2.go" />
@@ -141,6 +140,9 @@
         <option value="$PROJECT_DIR$/third/0088-merge-sorted-array/main.go" />
         <option value="$PROJECT_DIR$/third/0189-rotate-array/main.go" />
         <option value="$PROJECT_DIR$/third/0299-bulls-and-cows/main.go" />
+        <option value="$PROJECT_DIR$/sec/0049-group-anagrams/main.go" />
+        <option value="$PROJECT_DIR$/sec/0242-valid-anagram/main.go" />
+        <option value="$PROJECT_DIR$/sec/0350-intersection-of-two-arrays-ii/main.go" />
       </list>
     </option>
   </component>
@@ -219,24 +221,13 @@
             <path>
               <item name="leetcode" type="b2602c69:ProjectViewProjectNode" />
               <item name="leetcode" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sec" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="leetcode" type="b2602c69:ProjectViewProjectNode" />
               <item name="leetcode" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="0299-bulls-and-cows" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="leetcode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leetcode" type="462c0819:PsiDirectoryNode" />
-              <item name="third" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="leetcode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leetcode" type="462c0819:PsiDirectoryNode" />
-              <item name="third" type="462c0819:PsiDirectoryNode" />
-              <item name="0299-bulls-and-cows" type="462c0819:PsiDirectoryNode" />
+              <item name="sec" type="462c0819:PsiDirectoryNode" />
+              <item name="0350-intersection-of-two-arrays-ii" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -256,8 +247,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/third" />
       <recent name="$PROJECT_DIR$/sec" />
+      <recent name="$PROJECT_DIR$/third" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -272,21 +263,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build main.go">
+  <component name="RunManager" selected="Go Build.go build main.go (4)">
     <configuration name="go build main.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
       <module name="leetcode" />
       <working_directory value="$PROJECT_DIR$/" />
       <go_parameters value="-i" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/third/0234-palindrome-linked-list/main.go" />
+      <filePath value="$PROJECT_DIR$/sec/0242-valid-anagram/main.go" />
       <directory value="$PROJECT_DIR$/" />
     </configuration>
-    <configuration name="go build main.go (3)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+    <configuration name="go build main.go (2)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
       <module name="leetcode" />
       <working_directory value="$PROJECT_DIR$/" />
       <go_parameters value="-i" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/third/0088-merge-sorted-array/main.go" />
+      <filePath value="$PROJECT_DIR$/sec/0049-group-anagrams/main.go" />
       <directory value="$PROJECT_DIR$/" />
     </configuration>
     <configuration name="go build main.go (4)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
@@ -294,7 +285,7 @@
       <working_directory value="$PROJECT_DIR$/" />
       <go_parameters value="-i" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/third/0026-remove-duplicates/main.go" />
+      <filePath value="$PROJECT_DIR$/sec/0350-intersection-of-two-arrays-ii/main.go" />
       <directory value="$PROJECT_DIR$/" />
     </configuration>
     <configuration name="go build main.go (5)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
@@ -314,19 +305,19 @@
       <directory value="$PROJECT_DIR$/" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Go Build.go build main.go (1)" />
-      <item index="1" class="java.lang.String" itemvalue="Go Build.go build main.go (4)" />
-      <item index="2" class="java.lang.String" itemvalue="Go Build.go build main.go (3)" />
-      <item index="3" class="java.lang.String" itemvalue="Go Build.go build main.go (5)" />
-      <item index="4" class="java.lang.String" itemvalue="Go Build.go build main.go" />
+      <item index="0" class="java.lang.String" itemvalue="Go Build.go build main.go (5)" />
+      <item index="1" class="java.lang.String" itemvalue="Go Build.go build main.go" />
+      <item index="2" class="java.lang.String" itemvalue="Go Build.go build main.go (2)" />
+      <item index="3" class="java.lang.String" itemvalue="Go Build.go build main.go (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Go Build.go build main.go (4)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Go Build.go build main.go" />
-        <item index="1" class="java.lang.String" itemvalue="Go Build.go build main.go (5)" />
-        <item index="2" class="java.lang.String" itemvalue="Go Build.go build main.go (3)" />
-        <item index="3" class="java.lang.String" itemvalue="Go Build.go build main.go (4)" />
-        <item index="4" class="java.lang.String" itemvalue="Go Build.go build main.go (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Go Build.go build main.go (4)" />
+        <item index="1" class="java.lang.String" itemvalue="Go Build.go build main.go (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Go Build.go build main.go (2)" />
+        <item index="3" class="java.lang.String" itemvalue="Go Build.go build main.go" />
+        <item index="4" class="java.lang.String" itemvalue="Go Build.go build main.go (5)" />
       </list>
     </recent_temporary>
   </component>
@@ -369,38 +360,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sec/0239-max-sliding-window/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="35" lean-forward="true" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/0011-max-area/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sec/0084-largest-rectangle-in/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/0239-max-sliding-window/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="22" column="13" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="22" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/0084-largest-rectangle-in/main.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
@@ -768,6 +727,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/0299-bulls-and-cows/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/third/0299-bulls-and-cows/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sec/0049-group-anagrams/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="14" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="23" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Sites/visualization_local/vis-api/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="32" column="39" lean-forward="true" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/third/0026-remove-duplicates/main.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -794,18 +785,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/0299-bulls-and-cows/main.go">
+    <entry file="file://$PROJECT_DIR$/sec/0242-valid-anagram/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        <state relative-caret-position="342">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/third/0299-bulls-and-cows/main.go">
+    <entry file="file://$PROJECT_DIR$/sec/0350-intersection-of-two-arrays-ii/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="414">
+          <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
           <folding />
         </state>
       </provider>
