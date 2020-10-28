@@ -11,28 +11,24 @@ func maxSlidingWindow(nums []int, k int) []int {
 	dq := NewDeque(l)
 	for i := 0; i < l; i ++ {
 		fmt.Println(left, right)
-		if dq.IsEmpty() {
-			goto rl
-		}
-		// 维护一个单调递减的队列
-		// 对于每个元素 如果大于等于队列的最后一个元素，就把队尾的元素去除，直到队列为空或者队尾元素大于当前元素，再把当前元素追加到队尾
-		// 队列第一个元素就是最大值
-		if nums[i] >= nums[dq.Tail().val] {
+		if i > 0 && nums[i] >= nums[dq.Tail().val] {
+			// 维护一个单调递减的队列
+			// 对于每个元素 如果大于等于队列的最后一个元素，就把队尾的元素去除，直到队列为空或者队尾元素大于当前元素，再把当前元素追加到队尾
+			// 队列第一个元素就是最大值
 			for dq.Tail() != nil && nums[i] >= nums[dq.Tail().val] {
 				dq.DeleteLast()
 			}
 		}
-	rl:
 		dq.InsertLast(i)
-		if right-left < k - 1 {
-			right++
-		} else {
+		if right-left == k-1 {
 			result = append(result, nums[dq.Head().val])
 			left++
 			right++
 			if dq.Head().val < left {
 				dq.DeleteFront()
 			}
+		} else {
+			right++
 		}
 		fmt.Println("result:", result)
 		fmt.Println("dq:", dq.ToList())
