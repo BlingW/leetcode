@@ -15,9 +15,9 @@ func dailyTemperatures(T []int) []int {
 	stack := NewStack(len(T))
 	for i := range T {
 		if stack.Len() != 0 {
-			for T[stack.Top()] < T[i] {
-				_, t := stack.Pop()
-				res[t] = i - t
+			for T[i] > T[stack.Top()] {
+				_, n := stack.Pop()
+				res[n] = i - n
 				if stack.Len() == 0 {
 					break
 				}

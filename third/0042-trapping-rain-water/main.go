@@ -3,23 +3,24 @@ package main
 import "fmt"
 
 func trap(height []int) int {
-	stack := NewStack(len(height))
+	if len(height) == 0 {
+		return 0
+	}
 	area := 0
-	for i, v := range height {
-		if stack.Len() !=0 {
-			for stack.Len() != 0 && v >= height[stack.Top()] {
-				_, hIndex := stack.Pop()
-				if stack.Len() == 0 {
+	stack := NewStack(len(height))
+	for i := range height {
+		if stack.topPtr != 0 {
+			for height[i] > height[stack.Top()] {
+				_, n := stack.Pop()
+				if stack.topPtr == 0 {
 					break
 				}
-				leftIndex := stack.Top()
-				h := min(height[i], height[leftIndex])
-				area += (h - height[hIndex]) * (i - leftIndex - 1)
+				h := min(height[stack.Top()], height[i])
+				area += (h - height[n]) * (i - stack.Top() - 1)
 			}
 		}
 		stack.Push(i)
 	}
-
 	return area
 }
 

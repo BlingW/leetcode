@@ -11,24 +11,30 @@ type ListNode struct {
 
 // 栈的方式
 func isPalindrome(head *ListNode) bool {
+	if head == nil {
+		return false
+	}
 	stack := NewStack(100)
 	cur := head
 	for cur != nil {
 		stack.Push(cur.Val)
 		cur = cur.Next
 	}
-	for stack.Len() != 0 {
-		_, n := stack.Pop()
-		if head.Val != n {
+	for stack.topPtr != 0 {
+		if head.Val != stack.Top() {
 			return false
 		}
 		head = head.Next
+		stack.Pop()
 	}
 	return true
 }
 
 // 反转链表
 func isPalindrome1(head *ListNode) bool {
+	if head == nil {
+		return false
+	}
 	slow, fast := head, head
 	for fast != nil {
 		if fast.Next == nil {
@@ -38,24 +44,20 @@ func isPalindrome1(head *ListNode) bool {
 		}
 		slow = slow.Next
 	}
-	var pre *ListNode = nil
-	cur := slow
-	for cur != nil {
-		tmp := cur.Next
-		cur.Next = pre
-		pre = cur
-		cur = tmp
+	var cur *ListNode = nil
+	for slow != nil {
+		tmp := slow.Next
+		slow.Next = cur
+		cur = slow
+		slow = tmp
 	}
-
-	secHead := pre
-	for secHead != nil {
-		if secHead.Val != head.Val {
+	for cur != nil {
+		if head.Val != cur.Val {
 			return false
 		}
-		secHead = secHead.Next
 		head = head.Next
+		cur = cur.Next
 	}
-
 	return true
 }
 
@@ -65,7 +67,7 @@ func main() {
 	l2 := &ListNode{2, l3}
 	l1 := &ListNode{1, l2}
 
-	fmt.Println(isPalindrome1(l1))
+	fmt.Println(isPalindrome(l1))
 }
 
 type normalStack struct {
