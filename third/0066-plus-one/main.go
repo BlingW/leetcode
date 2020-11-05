@@ -13,11 +13,10 @@ func plusOne(digits []int) []int {
 			digits = append([]int{1}, digits...)
 		}
 	}
-
 	return digits
 }
 
 func main() {
-	var d = []int{7, 8, 9, 8}
+	var d = []int{7, 8, 9, 9}
 	fmt.Println(plusOne(d))
 }
