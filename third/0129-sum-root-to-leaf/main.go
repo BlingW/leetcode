@@ -21,20 +21,20 @@ func sumNumbers(root *TreeNode) int {
 		return 0
 	}
 	sum := 0
-	var summer func(node *TreeNode, curSum int)
-	summer = func(node *TreeNode, curSum int) {
+	var summer func(cur int, node *TreeNode)
+	summer = func(cur int, node *TreeNode) {
 		if node.Left == nil && node.Right == nil {
-			sum += curSum*10 + node.Val
+			sum += cur * 10 + node.Val
 			return
 		}
 		if node.Left != nil {
-			summer(node.Left, curSum*10+node.Val)
+			summer(cur * 10 + node.Val, node.Left)
 		}
 		if node.Right != nil {
-			summer(node.Right, curSum*10+node.Val)
+			summer(cur * 10 + node.Val, node.Right)
 		}
 	}
-	summer(root, 0)
+	summer(0, root)
 	return sum
 }
 

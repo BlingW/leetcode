@@ -12,7 +12,7 @@ type ListNode struct {
 // https://leetcode-cn.com/problems/reverse-nodes-in-k-group/solution/k-ge-yi-zu-fan-zhuan-lian-biao-by-leetcode-solutio/
 func reverseKGroup(head *ListNode, k int) *ListNode {
 	hair := &ListNode{0, head}
-	pre, tail := hair, hair
+	tail, pre := hair, hair
 	for tail != nil {
 		for i := 0; i < k; i++ {
 			tail = tail.Next
@@ -22,9 +22,10 @@ func reverseKGroup(head *ListNode, k int) *ListNode {
 		}
 		head, tail = reverseIn(head, tail)
 		pre.Next = head
-		head = tail.Next
 		pre = tail
+		head = tail.Next
 	}
+
 	return hair.Next
 }
 
@@ -49,7 +50,7 @@ func main() {
 	l2 := &ListNode{2, l3}
 	l1 := &ListNode{1, l2}
 
-	head := reverseKGroup(l1, 2)
+	head := reverseKGroup(l1, 7)
 	for head != nil {
 		fmt.Print(head.Val)
 		head = head.Next
