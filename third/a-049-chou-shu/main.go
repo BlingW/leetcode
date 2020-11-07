@@ -7,26 +7,22 @@ func main() {
 }
 
 func nthUglyNumber(n int) int {
-	// 合并三个有序数组
-	if n == 0 {
-		return 0
-	}
-	q := make([]int, n)
-	q[0] = 1
 	p2, p3, p5 := 0, 0, 0
-	for i := 1; i < n; i ++ {
-		q[i] = min(min(2 * q[p2], 3 * q[p3]), 5 * q[p5])
-		if q[i] == 2 * q[p2] {
+	p := make([]int, 11)
+	p[0] = 1
+	for i := 1; i < n; i++ {
+		p[i] = min(min(p[p2] * 2, p[p3] * 3), p[p5] * 5)
+		if p[i] == p[p2] * 2 {
 			p2++
 		}
-		if q[i] == 3 * q[p3] {
+		if p[i] == p[p3] * 3 {
 			p3++
 		}
-		if q[i] == 5 * q[p5] {
+		if p[i] == p[p5] * 5 {
 			p5++
 		}
 	}
-	return q[n-1]
+	return p[n-1]
 }
 
 func min(a, b int) int {
