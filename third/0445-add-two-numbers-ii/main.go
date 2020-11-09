@@ -18,8 +18,6 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 		stack2.Push(cur2.Val)
 		cur2 = cur2.Next
 	}
-
-	fmt.Println(stack1.l, stack2.l)
 	carryFlag := 0
 	resultStack := NewStack(50)
 	for stack1.Len() != 0 && stack2.Len() != 0 {
@@ -34,8 +32,6 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 			carryFlag = 0
 		}
 	}
-
-	fmt.Println(stack1.l, stack2.l, resultStack.l)
 	if stack1.Len() != 0 {
 		for stack1.Len() != 0 {
 			_, s1 := stack1.Pop()
@@ -49,7 +45,6 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 			}
 		}
 	}
-
 	if stack2.Len() != 0 {
 		for stack2.Len() != 0 {
 			_, s2 := stack2.Pop()
@@ -63,11 +58,9 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 			}
 		}
 	}
-
 	if carryFlag == 1 {
 		resultStack.Push(1)
 	}
-
 	newHead := &ListNode{0, nil}
 	cur := newHead
 	for resultStack.Len() != 0 {
@@ -76,7 +69,6 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 		cur.Next = tmp
 		cur = tmp
 	}
-
 	return newHead.Next
 }
 
