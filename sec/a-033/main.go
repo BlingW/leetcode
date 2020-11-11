@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	fmt.Println(verifyPostorder([]int{1, 2, 5, 10, 6, 9, 4, 3}))

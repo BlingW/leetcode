@@ -3,10 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(ladderLength("hit", "cog", []string{"hot","dot","dog","lot","log","cog"}))
-}
+	fmt.Println(findLadders("hit", "cog", []string{"hot","dot","dog","lot","log","cog"}))}
 
-func ladderLength(beginWord string, endWord string, wordList []string) int {
+func findLadders(beginWord string, endWord string, wordList []string) [][]string {
 	wordList = append(wordList, beginWord)
 	form := make(map[string][]string)
 	used := make(map[string]bool)
@@ -24,15 +23,17 @@ func ladderLength(beginWord string, endWord string, wordList []string) int {
 			}
 		}
 	}
+	fmt.Println(form)
 	queue := []string{beginWord}
 	level := 1
+	res := make([][]string, 0)
 	for len(queue) != 0 {
 		levelSize := len(queue)
 		for i := 0; i < levelSize; i++ {
 			word := queue[0]
 			queue = queue[1:]
 			if word == endWord {
-				return level
+
 			}
 			for i := range form[word] {
 				if !used[form[word][i]] {
@@ -43,5 +44,5 @@ func ladderLength(beginWord string, endWord string, wordList []string) int {
 		}
 		level++
 	}
-	return 0
+	return res
 }
