@@ -3,54 +3,48 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(minMutation("AACCGGTT", "AACCGCTA", []string{"AACCGGTA", "AACCGCTA", "AAACGCTA"}))
+	fmt.Println(minMutation("AAAAACCC", "AACCCCCC", []string{"AAAACCCC","AAACCCCC","AACCCCCC"}))
 }
 
 func minMutation(start string, end string, bank []string) int {
-	if idxOf(end, bank) == -1 {
+	form := make(map[string]bool)
+	for _, b := range bank {
+		form[b] = true
+	}
+	if _, exist := form[end]; !exist {
 		return -1
 	}
-	used := make(map[int]bool)
-	res := -1
-	var dfs func(s string, count int)
-	dfs = func(s string, count int) {
-		if s == end {
-			if res == -1 || res != -1 && count < res {
-				res = count
-			}
-			return
-		}
-		for i := range bank {
-			if used[i] {
-				continue
-			}
-			if canChange(s, bank[i]) {
-				used[i] = true
-				dfs(bank[i], count+1)
-				used[i] = false
-
-			}
-		}
+	if _, exist := form[start]; !exist {
+		bank = append(bank, start)
+		form[start] = false
 	}
-	dfs(start, 0)
-	return res
-}
-
-func idxOf(str string, bank []string) int {
-	for i, s := range bank {
-		if s == str {
-			return i
+	queue :=[]string{start}
+	level := 0
+	for len(queue) != 0 {
+		size := len(queue)
+		for i := 0; i < size; i++ {
+			n := queue[0]
+			fmt.Println(n, level)
+			if n == end {
+				return level
+			}
+			queue = queue[1:]
+			for j := 0; j < len(n); j++ {
+				for _, l := range gen() {
+					newG := []int32(n)
+					newG[j] = l
+					if form[string(newG)] {
+						queue = append(queue, string(newG))
+						form[string(newG)] = false
+					}
+				}
+			}
 		}
+		level++
 	}
 	return -1
 }
 
-func canChange(a, b string) bool {
-	diffCount := 0
-	for i := range a {
-		if a[i] != b[i] {
-			diffCount++
-		}
-	}
-	return diffCount == 1
+func gen() []int32 {
+	return []int32{'A', 'C', 'G', 'T'}
 }
