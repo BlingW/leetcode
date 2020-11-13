@@ -23,7 +23,6 @@ func findLadders(beginWord string, endWord string, wordList []string) [][]string
 			}
 		}
 	}
-	fmt.Println(form)
 	queue := []string{beginWord}
 	level := 1
 	res := make([][]string, 0)
