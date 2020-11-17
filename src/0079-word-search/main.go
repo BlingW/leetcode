@@ -48,14 +48,12 @@ func exist(board [][]byte, word string) bool {
 		}
 		return false
 	}
-	find := false
 	for row, rowL := range board {
 		for col := range rowL {
 			if dfs(row, col, 0) {
-				find = true
-				break
+				return true
 			}
 		}
 	}
-	return find
+	return false
 }

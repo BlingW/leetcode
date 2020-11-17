@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(removeKdigits("1234567890", 9))
+	fmt.Println(removeKdigits("1432219", 3))
 }
 
 func removeKdigits(num string, k int) string {
@@ -15,6 +15,7 @@ func removeKdigits(num string, k int) string {
 			k--
 		}
 		stack = append(stack, v)
+		fmt.Println(stack)
 	}
 	stack = stack[:remain]
 	for _, v := range stack {
