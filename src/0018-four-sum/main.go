@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	fmt.Println(fourSum([]int{1, -2, -5, -4, -3, 3, 3, 5}, -11))
+	fmt.Println(fourSum([]int{0, 4, -5, 2, -2, 4, 2, -1, 4}, 12))
 }
 
 func fourSum(nums []int, target int) [][]int {
