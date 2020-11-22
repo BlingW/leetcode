@@ -17,9 +17,7 @@ func reverseList1(head *ListNode) *ListNode {
 	// 每次让 head 的 next 指向 cur ，实现一次局部反转
 	// 局部反转完成之后，head 和 cur 同时往前移动一个位置
 	// 循环上述过程，直至 head 到达链表尾部
-	var (
-		cur *ListNode = nil
-	)
+	cur := (*ListNode)(nil)
 
 	for head != nil {
 		tmp := head.Next
@@ -61,7 +59,7 @@ func main() {
 	l2 := &ListNode{2, l3}
 	l1 := &ListNode{1, l2}
 
-	reverseList(l1)
+	reverseList1(l1)
 
 	fmt.Println(l5.Val, l5.Next.Val, l5.Next.Next.Val, l5.Next.Next.Next.Val, l5.Next.Next.Next.Next.Val)
 }
