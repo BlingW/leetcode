@@ -24,6 +24,7 @@ func maxProfit(prices []int) int {
 		c = max(c, d+v)
 		d = max(d, a-v)
 	}
+
 	return c
 }
 
