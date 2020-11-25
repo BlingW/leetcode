@@ -12,6 +12,9 @@ func main() {
 }
 
 func maximalSquare(matrix [][]byte) int {
+	if len(matrix) == 0 || len(matrix[0]) == 0 {
+		return 0
+	}
 	h, w := len(matrix), len(matrix[0])
 	grid := make([][]int, h+1)
 	for i := range grid {
@@ -28,7 +31,7 @@ func maximalSquare(matrix [][]byte) int {
 			maxSide = max(maxSide, grid[row][col])
 		}
 	}
-	return maxSide
+	return maxSide * maxSide
 }
 
 func max(a, b int) int {
