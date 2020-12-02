@@ -13,31 +13,20 @@ func main() {
 		{'.', '6', '.', '.', '.', '.', '2', '8', '.'},
 		{'.', '.', '.', '4', '1', '9', '.', '.', '5'},
 		{'.', '.', '.', '.', '8', '.', '.', '7', '9'},
-		}
+	}
 	solveSudoku(nums)
 	fmt.Println(nums)
 }
 
 func solveSudoku(board [][]byte) {
-	usedRow := make([]map[byte]bool, 9)
-	usedCol := make([]map[byte]bool, 9)
-	usedWin := make([]map[byte]bool, 9)
+	usedRow, usedCol, usedWin := [9][9]bool{}, [9][9]bool{}, [9][9]bool{}
 	doneFlag := false
-	for i := range usedRow {
-		usedRow[i] = make(map[byte]bool)
-	}
-	for i := range usedCol {
-		usedCol[i] = make(map[byte]bool)
-	}
-	for i := range usedWin {
-		usedWin[i] = make(map[byte]bool)
-	}
 	for row, rowV := range board {
 		for col, colV := range rowV {
 			if colV != '.' {
-				usedRow[row][colV] = true
-				usedCol[col][colV] = true
-				usedWin[getWindow(row, col)][colV] = true
+				usedRow[row][colV-'1'] = true
+				usedCol[col][colV-'1'] = true
+				usedWin[getWindow(row, col)][colV-'1'] = true
 			}
 		}
 	}
@@ -47,17 +36,14 @@ func solveSudoku(board [][]byte) {
 			doneFlag = true
 			return
 		}
-		cur := board[row][col]
-		win := getWindow(row, col)
+		cur, win := board[row][col], getWindow(row, col)
 		if cur == '.' {
 			for i := 1; i <= 9; i++ {
 				iByte := toByte(i)
-				if usedRow[row][iByte] || usedCol[col][iByte] || usedWin[win][iByte] {
+				if usedRow[row][i-1] || usedCol[col][i-1] || usedWin[win][i-1] {
 					continue
 				}
-				usedRow[row][iByte] = true
-				usedCol[col][iByte] = true
-				usedWin[win][iByte] = true
+				usedRow[row][i-1], usedCol[col][i-1], usedWin[win][i-1] = true, true, true
 				board[row][col] = iByte
 				if col == 8 {
 					dfs(row+1, 0)
@@ -66,9 +52,7 @@ func solveSudoku(board [][]byte) {
 				}
 				if !doneFlag {
 					board[row][col] = '.'
-					usedRow[row][iByte] = false
-					usedCol[col][iByte] = false
-					usedWin[win][iByte] = false
+					usedRow[row][i-1], usedCol[col][i-1], usedWin[win][i-1] = false, false, false
 				}
 			}
 		} else {
@@ -83,39 +67,9 @@ func solveSudoku(board [][]byte) {
 }
 
 func getWindow(row, col int) int {
-	switch {
-	case row < 3:
-		switch {
-		case col < 3:
-			return 0
-		case col >= 3 && col < 6:
-			return 1
-		case col >= 6:
-			return 2
-		}
-	case row >= 3 && row < 6:
-		switch {
-		case col < 3:
-			return 3
-		case col >= 3 && col < 6:
-			return 4
-		case col >= 6:
-			return 5
-		}
-	case row >= 6:
-		switch {
-		case col < 3:
-			return 6
-		case col >= 3 && col < 6:
-			return 7
-		case col >= 6:
-			return 8
-		}
-	}
-	return 0
+	return (row/3)*3 + col/3
 }
 
 func toByte(i int) byte {
-	var l = []byte{'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'}
-	return l[i]
+	return byte('0' + i)
 }
