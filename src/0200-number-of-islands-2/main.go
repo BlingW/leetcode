@@ -36,8 +36,8 @@ func numIslands(grid [][]byte) int {
 	return uf.count
 }
 
-func getKey(row, col int) string {
-	return strconv.Itoa(row)+";"+strconv.Itoa(col)
+func getKey(row, col int) int {
+	return row*1000+col
 }
 
 func get2Conn(row, col int) [2][2]int {
@@ -48,21 +48,21 @@ func get2Conn(row, col int) [2][2]int {
 
 type UnionFind struct {
 	count  int
-	parent map[string]string
+	parent map[int]int
 }
 
 func NewUF() *UnionFind {
-	return &UnionFind{count: 0, parent: make(map[string]string)}
+	return &UnionFind{count: 0, parent: make(map[int]int)}
 }
 
-func (u *UnionFind) Append(s ...string) {
+func (u *UnionFind) Append(s ...int) {
 	for i := range s {
 		u.parent[s[i]] = s[i]
 		u.count++
 	}
 }
 
-func (u *UnionFind) Find(s string) string {
+func (u *UnionFind) Find(s int) int {
 	cur := s
 	for u.parent[cur] != cur {
 		cur = u.parent[cur]
@@ -73,7 +73,7 @@ func (u *UnionFind) Find(s string) string {
 	return cur
 }
 
-func (u *UnionFind) Union(i, j string) {
+func (u *UnionFind) Union(i, j int) {
 	rootI, rootJ := u.Find(i), u.Find(j)
 	if rootI != rootJ {
 		u.parent[rootI] = rootJ
